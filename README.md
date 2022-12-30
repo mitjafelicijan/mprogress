@@ -27,4 +27,4 @@ echo 100 200 | ./progress_bar
 [sudo] make install
 ```
 
-![Usage](https://user-images.githubusercontent.com/296714/210075475-9ae14ac6-6e64-4dcf-b422-0332dfa2a69e.png)
+![Usage](https://user-images.githubusercontent.com/296714/210076971-b59ec52b-26ef-4b8c-b569-b863fec3af1a.png)

@@ -4,7 +4,7 @@
 #include <math.h>
 
 #define BUFFER_SIZE 128
-#define PROGRESS_LENGTH 40
+#define PROGRESS_WIDTH 40
 
 void usage(char *argv[])
 {
@@ -53,11 +53,11 @@ int main(int argc, char *argv[])
     int num_digits = log10(total) + 1;
 
     printf(" ");
-    for (size_t i = 0; i <= PROGRESS_LENGTH; i++)
+    for (size_t i = 0; i <= PROGRESS_WIDTH; i++)
     {
-        printf("%s", (i <= ((PROGRESS_LENGTH * percentage) / 100) ? "\u2593" : "\u2591"));
+        printf("%s", (i <= ((PROGRESS_WIDTH * percentage) / 100) ? "\u2593" : "\u2591"));
     }
-    printf(" %*zu%% %*zu/%zu\n", 3, percentage, num_digits, current, total);
+    printf("  %*zu%%  %*zu/%zu\n", 3, percentage, num_digits, current, total);
 
     return 0;
 }
