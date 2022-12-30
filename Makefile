@@ -30,5 +30,5 @@ test: mprogress
 format:
 	clang-format --style=microsoft -i *.c
 
-install:
+install: mprogress
 	install -m 755 mprogress /usr/local/bin

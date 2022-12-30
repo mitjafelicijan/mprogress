@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
         }
     }
 
-    if (current < 0 || total <= 0)
+    if (current < 0 || total <= 0 || current > total)
     {
         printf("Invalid input\n");
         usage(argv);
