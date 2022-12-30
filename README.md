@@ -1,4 +1,4 @@
-# Small utility that displays progress bar in terminal
+# Tiny utility that displays progress bar in terminal
 
 Displays progress bar in terminal. It can be used as a standalone program so you can put it in `/usr/bin`. The name is stupid like that because of the potential name conflicts.
 
