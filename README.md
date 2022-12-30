@@ -21,4 +21,11 @@ make
 echo 100 200 | ./progress_bar
 ```
 
+## Insallation
+
+```sh
+make
+[sudo] make install
+```
+
 ![Usage](https://user-images.githubusercontent.com/296714/210075475-9ae14ac6-6e64-4dcf-b422-0332dfa2a69e.png)
