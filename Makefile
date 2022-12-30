@@ -1,4 +1,5 @@
 UNAME := $(shell uname)
+MAN_ROOT := /usr/share/man
 
 CC       = clang
 CFLAGS   =
@@ -30,5 +31,12 @@ test: mprogress
 format:
 	clang-format --style=microsoft -i *.c
 
-install: mprogress
+install: mprogress manpage
 	install -m 755 mprogress /usr/local/bin
+
+manpage:
+	pandoc mprogress.1.md -s -t man -o mprogress.1
+	@mkdir -p $(MAN_ROOT)/man1
+	cp -f mprogress.1 $(MAN_ROOT)/man1/mprogress.1
+	gzip $(MAN_ROOT)/man1/mprogress.1
+	mandb
