@@ -55,7 +55,7 @@ int main(int argc, char *argv[])
     printf(" ");
     for (size_t i = 0; i <= PROGRESS_WIDTH; i++)
     {
-        printf("%s", (i <= ((PROGRESS_WIDTH * percentage) / 100) ? "\u2593" : "\u2591"));
+        printf("%s", (percentage > 0 && i <= ((PROGRESS_WIDTH * percentage) / 100) ? "\u2593" : "\u2591"));
     }
     printf("  %*zu%%  %*zu/%zu\n", 3, percentage, num_digits, current, total);
 
